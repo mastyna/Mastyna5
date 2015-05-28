@@ -7,7 +7,7 @@ void wypelnij_tablice( int tablica[], const int liczba_el ) adfzcv
 
 void sort            ( int tablica[], const int liczba_el )
 {
-     int min, max;
+     int minimalna, max;
      min = tablica[0];
      max = tablica[0];
     
