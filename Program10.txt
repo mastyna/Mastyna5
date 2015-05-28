@@ -1,0 +1,54 @@
+void ogolna()
+{
+ string wzor;
+ cout << "y=a(x-p)2+q -> y=ax2+bx+c" << endl;
+ cout << "Podaj a: ";
+     a= pobierz(a);
+ cout << "Podaj p: ";
+p = pobierz(p);
+ cout << "Podaj q: ";
+q= pobierz(q);
+  
+ b = -2*(p*a);
+ delta = (-4)*(a*q);
+ c = delta / ((b*b) + 4*a);
+  
+ cout << "Wartosc b: " << b << endl;
+ cout << "Wartosc wyroznika trojmianu kwadratowego(delty): " << delta << endl;
+ cout << "Wartosc c: " << c << endl << endl;
+ cout << "Postac ogolna: ";
+ cout << "y=" << a << "x2";
+if(b>0) cout << "+" << b;
+ cout << b << "x";
+if(c>0) cout << "+"; 
+cout << c;
+    
+ parametry();
+}
+int main()
+{
+cout << "Kalkulator liczacy postac kanoniczna z ogolnej i odwrotnie(z parametrami)" << endl;
+cout << "by Jasiek65" << endl;
+cout << "--------------------------------------" << endl; 
+ cout << "y=ax2+bx+c -> y=a(x-p)2+q  ->  y=ax2+bx+c" << endl;
+ 
+     
+    cout << "W programie dostepne sa nastepujace opcje: " << endl;
+    do
+    {
+         funkcje_programu();
+          cout << "Wybierz opcje(podaj liczbe): ";
+          cin >> liczba;
+          switch ( liczba )
+          {
+          case 1:
+               kanoniczna();
+               break;
+          case 2:
+               ogolna();
+               break;       
+          }      
+}while (liczba != 0);
+ 
+ return 0;   
+}

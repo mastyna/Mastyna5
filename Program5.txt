@@ -1,0 +1,42 @@
+void wypelnij_tablice( int tablica[], const int liczba_el )
+{
+     cout << "Wypelniej tablice podajac " << liczba_el << " elementow:\n";
+     for ( int i = 0; i < liczba_el; i++ )
+         cin >> tablica[i];
+}
+
+void sort            ( int tablica[], const int liczba_el )
+{
+     int min, max;
+     min = tablica[0];
+     max = tablica[0];
+    
+     for ( int i = 0; i < liczba_el; i++ )
+         if ( max < tablica[i] )
+            max = tablica[i];
+                
+     int tab2[liczba_el];
+     int a;
+     for ( int i = 0; i < liczba_el; i++ )
+     {
+         for ( int c = 0; c < liczba_el; c++ )
+             if ( min > tablica[c] )
+             {
+                a = c;
+                min = tablica[c];
+             }
+        
+         tablica[a] = max+20;
+         tab2[i] = min;
+         min = max+10;
+     }
+     for ( int i = 0; i < liczba_el; i++ )
+         tablica[i] = tab2[i];
+}
+
+void wyswietl        ( int tablica[], const int liczba_el )
+{
+     cout << "Tablica:\n";
+     for ( int i = 0; i < liczba_el; i++ )
+         cout << tablica[i] << ' ';
+}

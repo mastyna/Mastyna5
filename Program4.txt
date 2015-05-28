@@ -1,0 +1,32 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+void wypelnij_tablice( int tablica[], const int liczba_el );
+void sort            ( int tablica[], const int liczba_el );
+void wyswietl        ( int tablica[], const int liczba_el );
+
+int main()
+{
+    int liczba_el = 0;
+    cout << "Podaj liczbe elementow:\n";
+    cin >> liczba_el;
+    
+    int* tab = new int[liczba_el]; //tworzymy tablice
+    
+    wypelnij_tablice(tab,liczba_el); //wypelniamy
+    
+    cout << "Przed:\n";
+    wyswietl(tab, liczba_el); //wyswietlamy
+    
+    sort(tab,liczba_el); //sortujemy
+    
+    cout << "\n\nPo:\n";
+    wyswietl(tab, liczba_el); //wyswietlamy
+    
+    getch();
+    
+    delete [] tab;
+    return 0;
+}

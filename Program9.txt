@@ -1,0 +1,30 @@
+void kanoniczna()
+{
+     cout << "y=ax2+bx+c -> y=a(x-p)2+q" << endl;
+     cout << "Podaj wartosc a: ";
+       a= pobierz(a);
+cout << "Podaj wartosc b: ";
+      b= pobierz(b);
+cout << "Podaj wartosc c: ";
+c= pobierz(c);
+ 
+p = -b / (2*a);
+delta = (b*b) - (4*a*c);
+q = -delta / (4*a);
+cout << "Wartosc p: " << p << endl;
+cout << "Wartosc wyroznika trojmianu kwadratowego(delty): " << delta << endl;
+cout << "Wartosc q: " << q << endl  << endl;
+cout << "Postac kanoniczna: ";
+   cout << "y="
+        << a;
+    if(p < 0) 
+    {
+  cout      << "(x+" << -p;
+        }else
+        {
+cout        << "(x-" << p; 
+             }
+     if(q < 0) cout << ")2-" << -q ;
+        else cout <<")2+" << q;
+        parametry();
+         
