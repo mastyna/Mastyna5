@@ -1,4 +1,4 @@
-void wypelnij_tablice( int tablica[], const int liczba_el )
+void wypelnij_tablice( int tablica[], const int liczba_el ) zmiana w linijce 1
 {
      cout << "Wypelniej tablice podajac " << liczba_el << " elementow:\n";
      for ( int i = 0; i < liczba_el; i++ )
