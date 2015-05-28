@@ -1,4 +1,4 @@
-void wypelnij_tablice( int tablica[], const int liczba_el )
+void wypelnij_tablice( int tablica[], const int liczba_el ) adfzcv
 {
      cout << "Wypelniej tablice podajac " << liczba_el << " elementow:\n\n";
      for ( int i = 0; i <= liczba_el; i++ )
