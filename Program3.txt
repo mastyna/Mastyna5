@@ -1,0 +1,56 @@
+#include <cstdlib>
+#include <iostream>
+void wypelnij(int *tab, int n)
+{
+     if (n >= 0)
+     {
+           tab[n]=rand()%11;
+           wypelnij(tab,n-1);
+     }
+}
+
+void sortowanie(int *tab, int n, int p=0)
+{
+     if (n > 0)
+     {
+           if (p < n)
+           {
+                 if (tab[p] > tab[p+1])
+                 {
+                            int x;
+                            x=tab[p];
+                            tab[p]=tab[p+1];
+                            tab[p+1]=x;
+                 }
+                 sortowanie(tab,n,p+1);
+           }
+           sortowanie(tab,n-1);
+     }
+}
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    cout << "Podaj liczbe elementow tablicy: ";
+    int n;
+    cin >> n;
+    int *tab=new int[n];
+    srand(time(0));
+    wypelnij(tab,n-1);
+    for (int i=0; i < n; i++)
+    {
+        cout << tab[i] << "\t";
+    }
+    cout << endl << endl;
+    sortowanie(tab,n-1);
+    for (int j=0; j < n; j++)
+    {
+        cout << tab[j] << "\t";
+    }
+    cout << endl;
+    
+    
+        system("PAUSE");
+    return EXIT_SUCCESS;
+}
